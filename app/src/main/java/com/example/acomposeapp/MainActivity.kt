@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -51,14 +52,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Hello. Please enter your name!",
+            text = "Hello!",
             modifier = modifier,
             fontSize = 22.sp
         )
-        TextField(
+        OutlinedTextField(
             value = myName,
             onValueChange = { myName = it },
-            label = { Text("Name") }
+            label = { Text("Enter Your Name") }
         )
     }
 }
