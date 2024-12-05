@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -46,6 +47,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
     var myName by rememberSaveable() { mutableStateOf("") }
 
+    val colors = listOf("Blue", "Red", "Green", "Yellow")
+
     Column (
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -61,6 +64,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             onValueChange = { myName = it },
             label = { Text("Enter Your Name") }
         )
+
+        for (color in colors) {
+            Button (
+                onClick = {}
+            ) {
+                Text(color)
+            }
+        }
     }
 }
 
